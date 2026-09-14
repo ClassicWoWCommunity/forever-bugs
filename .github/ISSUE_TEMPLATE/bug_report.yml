@@ -10,14 +10,14 @@ body:
       label: Tags
       description: Select all categories that apply to this report.
       options:
-        - label: "Art/Visual"
-        - label: "Encounter"
+        - label: "Spells and Talents"
         - label: "Items"
         - label: "NPCs"
-        - label: "Other"
-        - label: "PvP"
         - label: "Quest"
-        - label: "Spells and Talents"
+        - label: "Encounter"
+        - label: "PvP"
+        - label: "Art/Visual"
+        - label: "Other"
     validations:
       required: true
 
