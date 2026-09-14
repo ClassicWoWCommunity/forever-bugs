@@ -1,5 +1,5 @@
-# This is a place for MOP Classic bug reports and research
-Feel free to open up issues for bug reports using the right format, provide as much detail as you can
+# This is a place for WoW Forever bug reports and research
+Feel free to open up issues for bug reports using the following format, providing as much detail as you can:
 
 ### 1. Current Behavior
   #### 1.1. Description
