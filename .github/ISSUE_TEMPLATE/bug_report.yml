@@ -1,17 +1,10 @@
-name: Bug Report
+name: WoW Forever Bug Report
 description: Report incorrect or unexpected behaviour in WoW Forever
-title: "[BUG] "
+title: ""
 labels:
   - "Pending Approval"
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        # WoW Forever Bug Report
-
-        Please provide as much detail as possible. The more information you provide, the easier it is to investigate and verify the issue.
-
   - type: checkboxes
     id: tags
     attributes:
@@ -29,15 +22,10 @@ body:
     validations:
       required: true
 
-  - type: markdown
-    attributes:
-      value: |
-        ## 1. Current Behavior
-
   - type: textarea
     id: current_behavior_description
     attributes:
-      label: "1.1 Description"
+      label: "Current Behavior"
       description: "Describe how the mechanic, spell, NPC, item, quest, etc. is currently working."
       placeholder: |
         Describe the current behaviour in as much detail as possible.
@@ -47,7 +35,7 @@ body:
   - type: textarea
     id: expected_behavior_description
     attributes:
-      label: "2.1 Description"
+      label: "Expected Behavior"
       description: "Describe how the mechanic, spell, NPC, item, quest, etc. should be working."
       placeholder: |
         Describe the expected behaviour in as much detail as possible.
@@ -57,7 +45,7 @@ body:
   - type: textarea
     id: reproduction_steps
     attributes:
-      label: "1.2 How to Reproduce"
+      label: "How to Reproduce"
       description: "Describe all the steps required to reproduce the issue. Include as many steps as necessary."
       placeholder: |
         1. Do this
@@ -71,15 +59,10 @@ body:
   - type: textarea
     id: current_behavior_sources
     attributes:
-      label: "1.3 Source Material"
+      label: "Source Material"
       description: "Provide any videos, screenshots, forum posts, logs, links, or other material supporting the current behaviour."
       placeholder: |
         Paste links or provide other relevant source material here.
     validations:
       required: false
-
-  - type: markdown
-    attributes:
-      value: |
-        ## 2. Expected Behavior
 
