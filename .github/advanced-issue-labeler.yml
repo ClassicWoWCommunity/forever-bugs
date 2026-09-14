@@ -1,6 +1,5 @@
 policy:
-  - template: ['bug_report.yml']
-    section:
+  - section:
       - id: [tags]
         label:
           - name: 'Art/Visual'
