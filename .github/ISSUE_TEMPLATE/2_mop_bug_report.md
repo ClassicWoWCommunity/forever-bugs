@@ -1,8 +1,8 @@
 ---
-name: MOP Classic Bug report
-about: Create a bug report for mists of pandaria classic
+name: WoW Forever Bug report
+about: Submit a bug report for WoW Forever
 title: "[BUG]"
-labels: Pending Approval, MoP
+labels: Pending Approval
 assignees: ''
 
 ---
