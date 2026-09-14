@@ -1,0 +1,36 @@
+policy:
+  - template: ['bug_report.yml']
+    section:
+      - id: [tags]
+        label:
+          - name: 'Art/Visual'
+            keys:
+              - 'Art/Visual'
+
+          - name: 'Encounter'
+            keys:
+              - 'Encounter'
+
+          - name: 'Items'
+            keys:
+              - 'Items'
+
+          - name: 'NPCs'
+            keys:
+              - 'NPCs'
+
+          - name: 'Other'
+            keys:
+              - 'Other'
+
+          - name: 'PvP'
+            keys:
+              - 'PvP'
+
+          - name: 'Quest'
+            keys:
+              - 'Quest'
+
+          - name: 'Spells and Talents'
+            keys:
+              - 'Spells and Talents'
