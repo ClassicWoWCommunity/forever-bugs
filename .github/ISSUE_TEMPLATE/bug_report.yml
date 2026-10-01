@@ -1,0 +1,67 @@
+name: WoW Forever Bug Report
+description: Report incorrect or unexpected behaviour in WoW Forever
+labels:
+  - "Pending Approval"
+
+body:
+  - type: checkboxes
+    id: tags
+    attributes:
+      label: Tags
+      description: Select all categories that apply to this report.
+      options:
+        - label: "Spells and Talents"
+        - label: "Items"
+        - label: "NPCs"
+        - label: "Quest"
+        - label: "Encounter"
+        - label: "PvP"
+        - label: "Art/Visual"
+        - label: "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_behavior_description
+    attributes:
+      label: "Current Behavior"
+      description: "Describe how the mechanic, spell, NPC, item, quest, etc. is currently working."
+      placeholder: |
+        Describe the current behaviour in as much detail as possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior_description
+    attributes:
+      label: "Expected Behavior"
+      description: "Describe how the mechanic, spell, NPC, item, quest, etc. should be working."
+      placeholder: |
+        Describe the expected behaviour in as much detail as possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: "How to Reproduce"
+      description: "Describe all the steps required to reproduce the issue. Include as many steps as necessary."
+      placeholder: |
+        1. Do this
+        2. Do that
+        3. Do this again
+        4. ...
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_behavior_sources
+    attributes:
+      label: "Source Material"
+      description: "Provide any videos, screenshots, forum posts, logs, links, or other material supporting the current behaviour."
+      placeholder: |
+        Paste links or provide other relevant source material here.
+    validations:
+      required: false
+

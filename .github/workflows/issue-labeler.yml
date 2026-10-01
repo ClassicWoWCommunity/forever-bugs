@@ -1,0 +1,60 @@
+name: Apply Issue Labels
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  label-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Parse issue form
+        uses: stefanbuck/github-issue-parser@v3
+        id: issue-parser
+        with:
+          template-path: .github/ISSUE_TEMPLATE/bug_report.yml
+
+      - name: Apply labels
+        uses: redhat-plumbers-in-action/advanced-issue-labeler@v3
+        with:
+          issue-form: ${{ steps.issue-parser.outputs.jsonString }}
+          section: tags
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Remove Tags section
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue view ${{ github.event.issue.number }} \
+            --repo ${{ github.repository }} \
+            --json body \
+            --jq '.body' > body.md
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path("body.md")
+          body = path.read_text()
+
+          body = re.sub(
+              r'(?ms)^### Tags\s*\n.*?(?=^### )',
+              '',
+              body
+          )
+
+          path.write_text(body.lstrip())
+
+          PY
+
+          gh issue edit ${{ github.event.issue.number }} \
+            --repo ${{ github.repository }} \
+            --body-file body.md
